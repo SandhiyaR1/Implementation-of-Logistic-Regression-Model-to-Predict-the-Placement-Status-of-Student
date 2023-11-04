@@ -62,6 +62,23 @@ from sklearn.linear_model import LogisticRegression
 clf=LogisticRegression()
 clf.fit(x_train,y_train)
 clf.score(x_test,y_test)
+from sklearn.linear_model import LogisticRegression
+lr = LogisticRegression(solver = "liblinear") 
+lr.fit(x_train,y_train)
+y_pred = lr.predict(x_test)
+y_pred
+
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(y_test,y_pred)
+accuracy
+
+from sklearn.metrics import confusion_matrix
+confusion = (y_test,y_pred)
+confusion 
+
+from sklearn.metrics import classification_report
+classification_report1 = classification_report(y_test,y_pred)
+print(classification_report1)
 # Predicting for random value
 clf.predict([[1	,78.33,	1,	2,	77.48,	2,	86.5,	0,	66.28]])
 ```
@@ -99,6 +116,10 @@ clf.predict([[1	,78.33,	1,	2,	77.48,	2,	86.5,	0,	66.28]])
 ### Creating a Classifier using Sklearn:
 
 ![image](https://github.com/SandhiyaR1/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/113497571/563ba84b-c13b-4cc2-9b3b-04bdfa9834ef)
+
+###  confusion matrix and classification report, 
+
+![image](https://github.com/SandhiyaR1/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/113497571/b218ab95-a3a4-4082-ae09-fae1f2f0579b)
 
 
 ### Predicting for random value:
